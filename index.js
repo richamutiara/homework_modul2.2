@@ -1,28 +1,15 @@
 import express from "express";
-// import playlistJson from "./playlist.json" assert { type: "json" };
 
 const playlistSongs = [
   {
     id: 1,
-    title: "stry of my life",
+    title: "Story of my life",
     artists: ["One Direction"],
     url: "https://open.spotify.com/track/4nVBt6MZDDP6tRVdQTgxJg",
   },
   {
     id: 2,
-    title: "stry of my life",
-    artists: ["One Direction"],
-    url: "https://open.spotify.com/track/4nVBt6MZDDP6tRVdQTgxJg",
-  },
-  {
-    id: 3,
-    title: "stry of my life",
-    artists: ["One Direction"],
-    url: "https://open.spotify.com/track/4nVBt6MZDDP6tRVdQTgxJg",
-  },
-  {
-    id: 4,
-    title: "stry of my life",
+    title: "Story of my life",
     artists: ["One Direction"],
     url: "https://open.spotify.com/track/4nVBt6MZDDP6tRVdQTgxJg",
   },
@@ -30,12 +17,6 @@ const playlistSongs = [
 
 const app = express();
 app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.json({
-    data: "GET Request",
-  });
-});
 
 app.post("/songs", (req, res) => {
   const songSentByUser = req.body;
@@ -48,9 +29,13 @@ app.post("/songs", (req, res) => {
 });
 
 app.get("/songs", (req, res) => {
-  const songTitle = req.query.title;
-  const result = playlistSongs.find((song) => song.title === songTitle);
-  res.json(result);
+  if (!req.query.title) {
+    res.json(playlistSongs)
+  } else {
+    const songTitle = req.query.title;
+    const result = playlistSongs.find((song) => song.title === songTitle);
+    res.json(result);
+  } 
 });
 
 // app.get("/songs", (req, res) => {
