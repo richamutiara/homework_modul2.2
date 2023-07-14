@@ -1,0 +1,28 @@
+{
+    "playlist" : [
+        {
+            "id" : 1,
+            "title" : "stry of my life",
+            "artists" : ["One Direction"],
+            "url" : "https://open.spotify.com/track/4nVBt6MZDDP6tRVdQTgxJg"
+        },
+        {
+            "id" : 2,
+            "title" : "stry of my life",
+            "artists" : ["One Direction"],
+            "url" : "https://open.spotify.com/track/4nVBt6MZDDP6tRVdQTgxJg"
+        },
+        {
+            "id" : 3,
+            "title" : "stry of my life",
+            "artists" : ["One Direction"],
+            "url" : "https://open.spotify.com/track/4nVBt6MZDDP6tRVdQTgxJg"
+        },
+        {
+            "id" : 4,
+            "title" : "stry of my life",
+            "artists" : ["One Direction"],
+            "url" : "https://open.spotify.com/track/4nVBt6MZDDP6tRVdQTgxJg"
+        }
+    ]
+}
