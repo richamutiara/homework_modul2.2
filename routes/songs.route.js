@@ -1,14 +1,17 @@
-import express from "express"
-import { getSongs, getSongByTitle, postSong, getSongById } from "../controllers/songs.controller.js";
+import express from 'express';
+import {
+  getAllSongs,
+  getSongByTitle,
+  getSongById,
+  postSong,
+} from '../controllers/rest/playlist.controller.js';
 
 const router = express.Router();
 
-router.get('/', getSongs, getSongByTitle);
+router.get('/', getAllSongs, getSongByTitle);
 
-router.get("/:id", getSongById)
+router.get('/:id', getSongById);
 
-router.post('/', postSong)
-
-
+router.post('/', postSong);
 
 export default router;
